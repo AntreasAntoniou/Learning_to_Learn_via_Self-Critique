@@ -1,5 +1,5 @@
 # Learning to Learn via Self-Critique in Pytorch
-The original code for the paper ["Learning to Learn via Self-Critique"]().
+The original code for the paper ["Learning to Learn via Self-Critique"](https://arxiv.org/abs/1905.10295).
 
 ## Introduction
 
@@ -95,7 +95,7 @@ samples for class_0    samples for class_1
 checkpoining and even fault-tolerant code. If your script is killed for whatever reason, you can simply rerun the script.
 It will find where it was before it was killed and continue onwards towards convergence!
 
-- few_shot_learning_system.py: Contains the meta_learning_system class which is where most of MAML and MAML++ are actually
+- few_shot_learning_system.py: Contains the meta_learning_system class which is where most of MAML++ and SCA are actually
 implemented. It takes care of inner and outer loop optimization, checkpointing, reloading and statistics generation, as 
 well as setting the rng seeds in pytorch.
 
@@ -118,8 +118,10 @@ def forward(x, weights=None):
 If we pass weights to it, then the layer/model will use those to do inference, otherwise it will use its internal 
 parameters. Doing so allows a model like MAML to be build very easily. At the first step, use weights=None and for any
 subsequent step just pass the new inner loop/dynamic weights to the network.
-
-- train_maml_system.py: A very minimal script that combines the data provider with a meta learning system and sends them
+- meta_optimizer.py: Contains inner loop optimizers for MAML++ and SCA.
+- standard_neural_network_architectures.py: Contains pytorch modules implementing various layers and network types. Contrary to meta_neural_network_architectures.py, the modules in this
+file do not include inner-loop optimization features. Thus, modules in this file can only learn static parameters for a network that do not change during inference.
+- train_few_shot_system.py: A very minimal script that combines the data provider with a meta learning system and sends them
  to the experiment builder to run an experiment. Also takes care of automated extraction of data if they are not 
  available in a folder structure.
 
