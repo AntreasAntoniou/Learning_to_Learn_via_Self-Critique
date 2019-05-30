@@ -3,8 +3,7 @@ The original code for the paper ["Learning to Learn via Self-Critique"](https://
 
 ## Introduction
 
-Welcome to the code repository of How to train your MAML arxiv_url. This repository includes code for training both MAML
-and MAML++ models, as well as data providers and the datasets for both. By using this codebase you agree to the terms 
+Welcome to the code repository of Learning to Learn via Self-Critique. This repository includes code for training both MAML++ and SCA models as well as data providers and the datasets for both. By using this codebase you agree to the terms 
 and conditions in the LICENSE file.
 
 ## Installation
