@@ -1,3 +1,7 @@
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/learning-to-learn-by-self-critique/few-shot-image-classification-on-cub-200-5-1)](https://paperswithcode.com/sota/few-shot-image-classification-on-cub-200-5-1?p=learning-to-learn-by-self-critique)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/learning-to-learn-by-self-critique/few-shot-image-classification-on-cub-200-5)](https://paperswithcode.com/sota/few-shot-image-classification-on-cub-200-5?p=learning-to-learn-by-self-critique)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/learning-to-learn-by-self-critique/few-shot-image-classification-on-mini-1)](https://paperswithcode.com/sota/few-shot-image-classification-on-mini-1?p=learning-to-learn-by-self-critique)	
+
 # Learning to Learn via Self-Critique in Pytorch
 The original code for the paper ["Learning to Learn via Self-Critique"](https://arxiv.org/abs/1905.10295).
 
