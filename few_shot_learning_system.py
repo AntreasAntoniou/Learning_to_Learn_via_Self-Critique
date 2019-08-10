@@ -568,7 +568,7 @@ class EmbeddingMAMLFewShotClassifier(MAMLFewShotClassifier):
                     support_set_features = F.avg_pool2d(support_outputs['features'],
                                                         support_outputs['features'].shape[-1]).squeeze()
                     pre_updated_target_features = F.avg_pool2d(pre_update_outputs['features'],
-                                                               support_set_features.shape[-1]).squeeze()
+                                                               pre_update_outputs['features'].shape[-1]).squeeze()
 
                 predicted_loss = self.critic_network.forward(support_set_features=x_support_set_task_features,
                                                              target_set_features=x_target_set_task_features,
